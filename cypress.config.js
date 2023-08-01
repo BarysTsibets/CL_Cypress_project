@@ -7,6 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
 
       // test comment 2
+      //new comment
     },
   },
 });
