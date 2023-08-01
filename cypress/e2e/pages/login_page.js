@@ -4,12 +4,14 @@ export class LoginPage{
         cy.contains('my account').click()
     }
 
-    enterUserName(){
-        cy.get('#inputEmailHandle').type('barystsibets@gmail.com')
+    enterUserName(email){
+        cy.get('#inputEmailHandle').type(email)
+        //barystsibets@gmail.com
     }
 
-    enterpassword(){
-        cy.get('#inputPassword').type('361337aB!')
+    enterpassword(paswd){
+        cy.get('#inputPassword').type(paswd)
+        //361337aB!
     }
 
     clickLogIn(){

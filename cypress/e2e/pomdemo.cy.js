@@ -10,8 +10,8 @@ it('test description', function(){
 
 
     loginPage.goToMyAccount()
-    loginPage.enterUserName()
-    loginPage.enterpassword()
+    loginPage.enterUserName('barystsibets@gmail.com')
+    loginPage.enterpassword('361337aB!')
     loginPage.clickLogIn()
 
 
