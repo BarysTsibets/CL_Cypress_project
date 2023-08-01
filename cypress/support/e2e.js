@@ -16,5 +16,10 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+
+// beforeEach(function(){
+//     cy.visit('https://losangeles.craigslist.org')
+// })
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
