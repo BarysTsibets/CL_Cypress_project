@@ -27,7 +27,7 @@ describe('Post item on CraigsList Suit', function(){
         // Fill out LogIn text boxes
         cy.get('#inputEmailHandle').type('barystsibets@gmail.com')
         cy.get('#inputPassword').type('361337aB!')
-        cy.get('#login').click()
+        cy.get('#login').click()    
     
         //Begin posting: select categories
         cy.get('.new_posting_thing > select').contains('los angeles')
