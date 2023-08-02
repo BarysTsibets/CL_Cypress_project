@@ -3,13 +3,13 @@ import {LoginPage} from "./pages/login_page"
 const loginPage = new LoginPage()
 
 
-describe('test SuitName', function(){
+describe('Login page test suit', function(){
 
     beforeEach(function(){
         cy.visit('https://losangeles.craigslist.org')
     })
-    
-    it('test description', function(){
+
+    it('Login positive test case', function(){
     
         // Open Main Page of CL and click "My account"
         //cy.visit('https://losangeles.craigslist.org')
@@ -26,8 +26,3 @@ describe('test SuitName', function(){
         // cy.get('#login').click()
     })
 })
-
-
-
-
-
