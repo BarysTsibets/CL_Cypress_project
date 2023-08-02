@@ -1,6 +1,8 @@
 import { LoginPage } from "./pages/login_page"
+import { StarPosting } from "./pages/start_posting_pages"
 
 const login = new LoginPage()
+const startPost = new StarPosting()
 
 
 
@@ -11,10 +13,21 @@ describe('Post item on CraigsList Suit', function(){
     })
 
     it('Create post on Craigslist.com e2e positive test', function(){
+        //Login flow
         login.goToMyAccount()
         login.enterUserName('barystsibets@gmail.com')
         login.enterpassword('361337aB!')
         login.clickLogIn()
+
+        //Start posting flow (select area/category/owner options)
+        //startPost.selectCity_before_post('los angeles')
+        cy.get('.new_posting_thing > select').contains('los angeles')
+
+        startPost.click_Go_btn()
+        startPost.selectArea()
+        startPost.selectWhoIsSeller()
+        startPost.selectCategory()
+        
         
     })
 
@@ -66,9 +79,6 @@ describe('Post item on CraigsList Suit', function(){
         cy.get('#plupload').should('be.visible').click()
     
     })
-
-
-
 
 
 })
