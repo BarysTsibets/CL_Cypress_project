@@ -5,7 +5,6 @@ const login = new LoginPage()
 const startPost = new StarPosting()
 
 
-
 describe('Post item on CraigsList Suit', function(){
 
     beforeEach(function(){
@@ -20,15 +19,11 @@ describe('Post item on CraigsList Suit', function(){
         login.clickLogIn()
 
         //Start posting flow (select area/category/owner options)
-        //startPost.selectCity_before_post('los angeles')
-        cy.get('.new_posting_thing > select').contains('los angeles')
-
+        startPost.selectCity_before_post('los angeles')
         startPost.click_Go_btn()
         startPost.selectArea()
         startPost.selectWhoIsSeller()
         startPost.selectCategory()
-        
-        
     })
 
 
@@ -79,19 +74,4 @@ describe('Post item on CraigsList Suit', function(){
         cy.get('#plupload').should('be.visible').click()
     
     })
-
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
