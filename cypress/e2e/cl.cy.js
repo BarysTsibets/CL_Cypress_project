@@ -15,6 +15,7 @@ it('Create post on Craigslist.com', function () {
     cy.contains('sale by owner').click()
     cy.contains('sporting goods').click()
 
+    
     //Fill up description of the item
     cy.get('#PostingTitle').type("7'6 Surfboard - Mid Length")  //Title
     cy.get('.numeric > .input > .json-form-input').type(225)  //Price
