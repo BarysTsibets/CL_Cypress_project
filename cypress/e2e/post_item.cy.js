@@ -46,12 +46,12 @@ describe('Post item on CraigsList Suit', function(){
     
         
         //Fill up description of the item
-        cy.get('#PostingTitle').type("7'6 Surfboard - Mid Length")  //Title
+        cy.get('#PostingTitle').type("Easton Hockey Bag (with Wheels)")  //Title
         cy.get('.numeric > .input > .json-form-input').type(225)  //Price
         cy.get('#geographic_area').type('Los Angeles')
         cy.get('#postal_code').type(90028)
-        cy.get('#PostingBody').type("7’6 Surfboard - Black Board {Shift}{Enter}7,6 x 21 x 2 3/4{Shift}{Enter}Great transition or beginner  mid length surfboard.{Shift}{Enter}Watertight. Comes with fins and leash{Shift}{Enter}Ready to surf 🏄‍♀️ 🏄‍♂️")
-    
+        cy.get('#PostingBody').type("Easton Hockey Bag (with Wheels){Shift}{Enter}Sr size: 36 x 16 x 14{Shift}{Enter}Great shape, lightly used")
+
         // Select CheckBox "show my number"
         cy.get('.json-form-item.show_phone_ok > .show_phone_ok').click()
     
