@@ -50,7 +50,6 @@ describe('Post item on CraigsList Suit', function(){
     })
 
 
-
     it.skip('Create post on Craigslist.com template', function () {
         // Open Main Page of CL and click "My account"
         //cy.visit('https://losangeles.craigslist.org')
