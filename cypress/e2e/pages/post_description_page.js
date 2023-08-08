@@ -12,23 +12,23 @@ export class ItemDescription{
 
 
     //Type description Title
-    typeItemTitle(){
-        cy.get(this.item_description_title).type("Easton Hockey Bag (with Wheels)")  //Title
+    typeItemTitle(title){
+        cy.get(this.item_description_title).type(title)  //Title
     }
     
     //Type description Price
-    typeItemPrice(){
-        cy.get(this.item_description_price).type(225)  //Price
+    typeItemPrice(price){
+        cy.get(this.item_description_price).type(price)  //Price
     }
 
     //Type description City
-    typeItemCity(){
-        cy.get(this.item_description_city).type('Los Angeles')  //City
+    typeItemCity(city){
+        cy.get(this.item_description_city).type(city)  //City
     }
 
     //Type description Zip
-    typeItemZip(){
-        cy.get(this.item_description_zip).type(90028)  //Zip
+    typeItemZip(zip){
+        cy.get(this.item_description_zip).type(zip)  //Zip
     }
 
     //Type description body
