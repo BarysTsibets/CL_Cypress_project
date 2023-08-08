@@ -1,8 +1,10 @@
 import { LoginPage } from "./pages/login_page"
 import { StarPosting } from "./pages/start_posting_pages"
+import { ItemDescription } from "./pages/post_description_page"
 
 const login = new LoginPage()
 const startPost = new StarPosting()
+const postDescription = new ItemDescription
 
 
 describe('Post item on CraigsList Suit', function(){
@@ -24,7 +26,21 @@ describe('Post item on CraigsList Suit', function(){
         startPost.selectArea()
         startPost.selectWhoIsSeller()
         startPost.selectCategory()
+
+        //Fill up Description of the item
+        postDescription.item_description_title("Easton Hockey Bag (with Wheels)")
+        postDescription.item_description_price(50)
+        
+
+
+
+
     })
+
+
+
+
+
 
 
     it.skip('Create post on Craigslist.com template', function () {
@@ -45,6 +61,10 @@ describe('Post item on CraigsList Suit', function(){
         cy.contains('sporting goods').click()
     
         
+
+
+
+
         //Fill up description of the item
         cy.get('#PostingTitle').type("Easton Hockey Bag (with Wheels)")  //Title
         cy.get('.numeric > .input > .json-form-input').type(225)  //Price
