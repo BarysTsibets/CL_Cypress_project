@@ -13,12 +13,10 @@ export class LoginPage{
 
     enterUserName(email){
         cy.get(this.loginpage_email_textbox).type(email)
-        //barystsibets@gmail.com
     }
 
     enterpassword(paswd){
         cy.get(this.loginpage_password_textbox).type(paswd)
-        //361337aB!
     }
 
     clickLogIn(){
