@@ -32,8 +32,8 @@ export class ItemDescription{
     }
 
     //Type description body
-    typeItemDescription(){
-        cy.get(this.item_description_body).type("Easton Hockey Bag (with Wheels){Shift}{Enter}Sr size: 36 x 16 x 14{Shift}{Enter}Great shape, lightly used")
+    typeItemDescription(body){
+        cy.get(this.item_description_body).type(body)  //Post description
     }
 
     // Select CheckBox "show my number"
@@ -42,8 +42,8 @@ export class ItemDescription{
     }
 
     //Type phone number
-    typeItemPhoneNumber(){
-        cy.get(this.item_description_phone_number).type(3232036570)  //PhoneNumber
+    typeItemPhoneNumber(phone_number){
+        cy.get(this.item_description_phone_number).type(phone_number)  //PhoneNumber
     }
 
     //Press Continue

@@ -1,10 +1,13 @@
 import { LoginPage } from "./pages/login_page"
 import { StarPosting } from "./pages/start_posting_pages"
 import { ItemDescription } from "./pages/post_description_page"
+import { ItemLocationPage } from "./pages/location_page"
+
 
 const login = new LoginPage()
 const startPost = new StarPosting()
 const postDescription = new ItemDescription
+const locationPage = new ItemLocationPage
 
 
 describe('Post item on CraigsList Suit', function(){
@@ -37,8 +40,15 @@ describe('Post item on CraigsList Suit', function(){
         postDescription.typeItemPhoneNumber(3232036570)
         postDescription.itemPressContinue()
 
-        
+        //Type location Zip code
+        locationPage.typeLocationZip('90028')
+            //.should('contain.value', '90028')        //assertion using 'cantain.value'
+            //.and('have.value', 90028)                 //assertion using 'have.value'      
+            
+        //Press Continue
+        locationPage.pressContinue()
     })
+
 
 
     it.skip('Create post on Craigslist.com template', function () {
@@ -57,11 +67,6 @@ describe('Post item on CraigsList Suit', function(){
         cy.contains('central LA').click()
         cy.contains('sale by owner').click()
         cy.contains('sporting goods').click()
-    
-        
-
-
-
 
         //Fill up description of the item
         cy.get('#PostingTitle').type("Easton Hockey Bag (with Wheels)")  //Title
