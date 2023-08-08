@@ -28,19 +28,17 @@ describe('Post item on CraigsList Suit', function(){
         startPost.selectCategory()
 
         //Fill up Description of the item
-        postDescription.item_description_title("Easton Hockey Bag (with Wheels)")
-        postDescription.item_description_price(50)
+        postDescription.typeItemTitle('Easton Hockey Bag (with Wheels)')
+        postDescription.typeItemPrice(50)
+        postDescription.typeItemCity('Los Angeles')
+        postDescription.typeItemZip(90028)
+        postDescription.typeItemDescription("Easton Hockey Bag (with Wheels){Shift}{Enter}Sr size: 36 x 16 x 14{Shift}{Enter}Great shape, lightly used")
+        postDescription.selectShowMyNumber()
+        postDescription.typeItemPhoneNumber(3232036570)
+        postDescription.itemPressContinue()
+
         
-
-
-
-
     })
-
-
-
-
-
 
 
     it.skip('Create post on Craigslist.com template', function () {
