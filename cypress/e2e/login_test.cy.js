@@ -19,10 +19,5 @@ describe('Login page test suit', function(){
         loginPage.enterpassword('361337aB!')
         loginPage.clickLogIn()
     
-        // cy.contains('my account').click()
-        // Fill out LogIn text boxes
-        // cy.get('#inputEmailHandle').type('barystsibets@gmail.com')
-        // cy.get('#inputPassword').type('361337aB!')
-        // cy.get('#login').click()
     })
 })
