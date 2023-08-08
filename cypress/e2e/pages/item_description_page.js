@@ -50,3 +50,6 @@ export class ItemDescription{
         itemPressContinue(){
             cy.get(this.item_press_continue).click()
         }
+
+    }
+
